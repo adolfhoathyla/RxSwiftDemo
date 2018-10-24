@@ -14,7 +14,7 @@ struct NetworkManager: Networkable {
     var provider = MoyaProvider<PostApi>()
     var isLoading = BehaviorSubject<Bool>(value: false)
     
-    func getNewPosts(completion: @escaping ((_ posts: [Post]?, _ success: Bool, _ error: Error?) -> ())) {
+    func getNewPosts(disposeBag: DisposeBag, completion: @escaping ((_ posts: [Post]?, _ success: Bool, _ error: Error?) -> ())) {
         
         //let disposeBag = DisposeBag()
 
@@ -28,7 +28,7 @@ struct NetworkManager: Networkable {
                 completion(nil, false, error)
             }
             self.isLoading.onNext(false)
-        }//.disposed(by: disposeBag)
+        }.disposed(by: disposeBag)
         
     }
 }

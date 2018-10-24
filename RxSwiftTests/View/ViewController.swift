@@ -12,13 +12,15 @@ import RxSwift
 
 class ViewController: UIViewController {
     
-    var posts = [Post]()
+    let postsVM = PostsViewModel()
+    
+    let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        let bag = DisposeBag()
+        
         
         let subject = BehaviorSubject<String>(value: "First")
         
@@ -43,9 +45,9 @@ class ViewController: UIViewController {
         
         
         
-        let provider = NetworkManager()
         
-        let _ = provider.isLoading.subscribe { (event) in
+        
+        let _ = postsVM.provider.isLoading.subscribe { (event) in
             switch event {
             case .next(let value):
                 print("IS LOADING: \(value)")
@@ -58,15 +60,11 @@ class ViewController: UIViewController {
         }
         
         
-        provider.getNewPosts { (posts, success, error) in
-            print("PRIMEIRA")
-            print(posts)
-        }
+
         
-        provider.getNewPosts { (posts, success, error) in
-            print("SEGUNDA")
-            print(posts)
-        }
+        postsVM.fetchPosts(disposeBag: bag)
+        postsVM.fetchPosts(disposeBag: bag)
+        postsVM.fetchPosts(disposeBag: bag)
     }
 
 

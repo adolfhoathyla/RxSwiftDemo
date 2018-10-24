@@ -21,6 +21,7 @@
 		1651B6DD217FDAB6003B391F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1651B6DC217FDAB5003B391F /* NetworkManager.swift */; };
 		4EAD71C879344F7BD4632657 /* Pods_RxSwiftTestsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB11D08056921450755331F8 /* Pods_RxSwiftTestsUITests.framework */; };
 		638DFB51D62534B875CD40F3 /* Pods_RxSwiftTestsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3AE1F1827E1B0669B96F6B /* Pods_RxSwiftTestsTests.framework */; };
+		C2B39C182180A206001CE3CE /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B39C172180A206001CE3CE /* PostsViewModel.swift */; };
 		CBB81276A3EE8F8BCE34EB17 /* Pods_RxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB740E9E08C64F032318D0AB /* Pods_RxSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		8E317E3AB1BE02E3611337F2 /* Pods-RxSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftTests/Pods-RxSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95925378946F26FCBE813724 /* Pods-RxSwiftTestsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTestsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftTestsUITests/Pods-RxSwiftTestsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C18D65AA0FB89442E29FCF0B /* Pods-RxSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftTests/Pods-RxSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2B39C172180A206001CE3CE /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		CB11D08056921450755331F8 /* Pods_RxSwiftTestsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftTestsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB740E9E08C64F032318D0AB /* Pods_RxSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3AE1F1827E1B0669B96F6B /* Pods_RxSwiftTestsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftTestsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,11 +139,12 @@
 		1611D790217D499800D8BDF6 /* RxSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				C2B39C162180A0B5001CE3CE /* ViewModel */,
+				C2B39C152180A0AB001CE3CE /* View */,
 				1651B6D7217FD741003B391F /* StubbedResponses */,
 				1651B6D4217FD39D003B391F /* Services */,
 				1651B6D1217FD126003B391F /* Model */,
 				1611D791217D499800D8BDF6 /* AppDelegate.swift */,
-				1611D793217D499800D8BDF6 /* ViewController.swift */,
 				1611D795217D499800D8BDF6 /* Main.storyboard */,
 				1611D798217D499C00D8BDF6 /* Assets.xcassets */,
 				1611D79A217D499C00D8BDF6 /* LaunchScreen.storyboard */,
@@ -202,6 +205,22 @@
 				CB11D08056921450755331F8 /* Pods_RxSwiftTestsUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2B39C152180A0AB001CE3CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1611D793217D499800D8BDF6 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2B39C162180A0B5001CE3CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2B39C172180A206001CE3CE /* PostsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +445,7 @@
 				1651B6D6217FD487003B391F /* PostApi.swift in Sources */,
 				1651B6D3217FD1A5003B391F /* Post.swift in Sources */,
 				1651B6DD217FDAB6003B391F /* NetworkManager.swift in Sources */,
+				C2B39C182180A206001CE3CE /* PostsViewModel.swift in Sources */,
 				1611D794217D499800D8BDF6 /* ViewController.swift in Sources */,
 				1651B6DB217FD9FE003B391F /* Networkable.swift in Sources */,
 				1611D792217D499800D8BDF6 /* AppDelegate.swift in Sources */,
